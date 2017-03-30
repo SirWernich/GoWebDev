@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Pipelining</title>
+</head>
+<body>
+        original number: {{ . }}
+
+        doubled: {{ . | fdbl}}
+
+        doubled then squared: {{ . | fdbl | fsq}}
+
+        doubled, squared then squareroot {{ . | fdbl | fsq | fsqrt}}
+
+</body>
+</html>

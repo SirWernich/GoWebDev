@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>builtin functions: and</title>
+</head>
+<body>
+
+        Example #1:
+        {{range .}}
+                {{.}}
+        {{end}}
+
+        Example #2:
+        {{if . }}
+                Example #2 - {{.}}
+        {{end}}
+
+        Example #3:
+        {{range .}}
+                {{if .}}
+                        Example #3 - {{.Name}}
+                {{end}}
+        {{end}}
+
+        Example #4:
+        {{range .}}
+                {{if and .Name .Admin}}
+                        Example #4 - Name: {{.Name}}
+                        Example #4 - Motto: {{.Motto}}
+                        Example #4 - Admin: {{.Admin}}
+                {{end}}
+        {{end}}
+</body>
+</html>
